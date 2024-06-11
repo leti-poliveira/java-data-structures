@@ -1,18 +1,71 @@
-## Getting Started
+# Lista Encadeada (LinkedList)
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Este projeto implementa uma lista encadeada simples em Java. A lista encadeada é uma estrutura de dados onde cada elemento (nó) aponta para o próximo elemento na sequência.
 
-## Folder Structure
+## Estrutura do Projeto
 
-The workspace contains two folders by default, where:
+O projeto consiste em uma classe principal `LinkedList` e uma classe interna `Node`.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+### Classe LinkedList
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+A classe `LinkedList` contém os seguintes atributos e métodos:
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+#### Atributos
 
-## Dependency Management
+- `private Node head`: Referência para o primeiro nó da lista.
+- `private Node tail`: Referência para o último nó da lista.
+- `private int length`: Comprimento da lista.
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+#### Construtor
+
+- `public LinkedList(String data)`: Inicializa uma nova lista com um único elemento.
+
+#### Métodos
+
+- `public void getHead()`: Exibe o valor do primeiro elemento da lista.
+- `public void getTail()`: Exibe o valor do último elemento da lista.
+- `public void getLength()`: Exibe o comprimento da lista.
+- `public void makeEmpty()`: Esvazia a lista, removendo todos os elementos.
+- `public void append(String data)`: Adiciona um novo elemento ao final da lista.
+- `public Node removeLast()`: Remove e retorna o último elemento da lista.
+- `public void prepend(String data)`: Adiciona um novo elemento ao início da lista.
+- `public Node removeFirst()`: Remove e retorna o primeiro elemento da lista.
+- `public Node get(int index)`: Retorna o elemento na posição especificada.
+- `public boolean set(int index, String data)`: Atualiza o valor do elemento na posição especificada.
+- `public boolean insert(int index, String data)`: Insere um novo elemento na posição especificada.
+- `public Node remove(int index)`: Remove e retorna o elemento na posição especificada.
+- `public void print()`: Exibe todos os elementos da lista.
+
+### Classe Interna Node
+
+A classe `Node` representa um único elemento da lista e contém os seguintes atributos:
+
+- `String data`: Valor armazenado no nó.
+- `Node next`: Referência para o próximo nó na lista.
+
+### Método Main
+
+O método `main` demonstra o uso da classe `LinkedList` através dos seguintes passos:
+
+1. Cria uma nova lista encadeada com o elemento "elemento 1".
+2. Adiciona "elemento 2" e "elemento 3" ao final da lista.
+3. Adiciona "elemento 0" ao início da lista.
+4. Remove o elemento na posição 2.
+5. Exibe todos os elementos da lista.
+
+### Exemplo de Uso
+
+```java
+public static void main(String[] args) {
+    LinkedList list = new LinkedList("elemento 1");
+    list.append("elemento 2");
+    list.append("elemento 3");
+    list.prepend("elemento 0");
+
+    list.remove(2);
+    list.print();
+}
+
+
+
+Este `README.md` fornece uma visão geral do projeto, explicando a estrutura da classe `LinkedList`, seus métodos e um exemplo de uso no método `main`.
