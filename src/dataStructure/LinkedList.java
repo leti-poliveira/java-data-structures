@@ -161,16 +161,6 @@ public class LinkedList {
                 
                 }
                 
-            
-            
-
-
-
-
-
-
-
-
     // Método para imprimir a lista
     public void print() {
         System.out.println("###########");
@@ -212,13 +202,6 @@ public class LinkedList {
         
         }
         
-
-
-
-
-
-
-
     // Método main para teste
     public static void main(String[] args) {
         LinkedList list = new LinkedList("elemento 1");
