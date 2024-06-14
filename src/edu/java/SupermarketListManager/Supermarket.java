@@ -11,7 +11,5 @@ public interface Supermarket {
     void deletar (final int index);
 
 
-
-
 }
 

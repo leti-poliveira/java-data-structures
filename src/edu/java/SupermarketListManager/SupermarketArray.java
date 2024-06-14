@@ -1,11 +1,12 @@
 package edu.java.SupermarketListManager;
 
 public class SupermarketArray implements Supermarket {
+    private String[] items;  // Declaração do array de itens
+    private int lastIndex;   // Índice do último item adicionado
 
-
-    public SupermarketArray(final int size) {
-        items = new String[size];
-        lastIndex = -1;
+    public SupermarketArray(int size) {
+        items = new String[size];  // Inicializa o array com o tamanho fornecido
+        lastIndex = -1;           // Inicializa o índice como -1 (lista vazia)
     }
 
     @Override
@@ -47,8 +48,3 @@ public class SupermarketArray implements Supermarket {
         items[lastIndex] = null; // Opcional: Limpa o último item
     }
 }
-
-
-
-
-
