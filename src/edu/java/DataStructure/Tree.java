@@ -1,4 +1,4 @@
-package dataStructure;
+package edu.java.DataStructure;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -45,24 +45,50 @@ public class Tree {
         }
     }
 
-
     public void preOrder() {
         preOrder(root);
-        
-        }
-        
-        private void preOrder(final Node node) {
+    }
+
+    private void preOrder(final Node node) {
         if (node == null) return;
         System.out.println(node.value);
         preOrder(node.left);
         preOrder(node.right);
+    }
 
-        
-        
+    public void inOrder() {
+        inOrder(root);
+    }
+
+    private void inOrder(final Node node) {
+        if (node == null) return;
+        inOrder(node.left);
+        System.out.println(node.value);
+        inOrder(node.right);
+    }
+
+    public void posOrder() {
+        posOrder(root);
+    }
+
+    private void posOrder(final Node node) {
+        if (node == null) return;
+        posOrder(node.left);
+        posOrder(node.right);
+        System.out.println(node.value);
+    }
+
+    public void BFS() {
+        if (root == null) return;
+        Queue<Node> queue = new LinkedList<>();
+        queue.add(root);
+        while (!queue.isEmpty()) {
+            Node node = queue.remove();
+            if (node.left != null) queue.add(node.left);
+            if (node.right != null) queue.add(node.right);
+            System.out.println(node.value);
         }
-
-
-
+    }
 
     public static void main(String[] args) {
         Tree tree = new Tree();
@@ -73,18 +99,17 @@ public class Tree {
         tree.insert(17);
         tree.insert(42);
         tree.insert(72);
-        
 
         System.out.println("###############");
-        tree.preOrder();
-     System.out.println("###############");
+        tree.BFS();
+        System.out.println("###############");
     }
 }
 
-
-      /*   O código acima implementa uma estrutura de dados chamada "árvore binária" em Java.
-       Uma árvore binária é uma estrutura de dados hierárquica em que cada nó tem no máximo dois 
-       filhos, geralmente chamados de filho esquerdo e filho direito.
+/*
+ O código acima implementa uma estrutura de dados chamada "árvore binária" em Java.
+ Uma árvore binária é uma estrutura de dados hierárquica em que cada nó tem no máximo dois 
+ filhos, geralmente chamados de filho esquerdo e filho direito.
 
 A principal função desse código é criar uma árvore binária e permitir a inserção de novos elementos 
 nela. Além disso, ele possui um método para percorrer a árvore em pré-ordem e imprimir os valores dos nós 
@@ -93,5 +118,4 @@ visitados.
 Essa estrutura de dados é útil em diversas situações, como para representar hierarquias de dados em 
 computação, realizar buscas eficientes, construir algoritmos de ordenação e realizar operações de conjunto,
  entre outras aplicações.
-
 */

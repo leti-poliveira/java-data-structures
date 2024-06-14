@@ -1,4 +1,4 @@
-package dataStructure;
+package edu.java.DataStructure;
 
 /*A  Fila possui duas extremidades: uma por onde é feita a 
 inserção de elementos (fim da fila) e outra por onde é feita a 

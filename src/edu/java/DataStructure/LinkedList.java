@@ -1,4 +1,4 @@
-package dataStructure;
+package edu.java.DataStructure;
 
 //Lista encadeada: LinkedList
 
